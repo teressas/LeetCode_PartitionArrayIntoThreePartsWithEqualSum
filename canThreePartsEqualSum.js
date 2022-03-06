@@ -11,6 +11,7 @@ var canThreePartsEqualSum = function (arr) {
         // sum all values in array
         totalSum += arr[i]
     }
+    // commented out because total sum cannot equal to 0
     // if total sum equal 0 return true
     // if(totalSum === 0){
     //     return true
@@ -22,7 +23,6 @@ var canThreePartsEqualSum = function (arr) {
         sumDivideByThree = totalSum / 3;
         // console.log({sumDivideByThree})
     }
-    // console.log(sumDivideByThree)
     let currentSum = 0;
     let count = 0;
     for (j = 0; j < arr.length; j++) {
@@ -31,13 +31,13 @@ var canThreePartsEqualSum = function (arr) {
         currentSum += arr[j]
         // console.log({ currentSum })
         if (currentSum === sumDivideByThree) {
-            // console.log("23", { currentSum })
+            // console.log("34", { currentSum })
             count++
             // console.log({count})
             currentSum = 0
             // return currentSum
         } else {
-            // console.log("26", { currentSum })
+            // console.log("40", { currentSum })
             continue
         }
     }
@@ -64,9 +64,9 @@ arr4 = [0,0,0,0]
 arr5 = [1,-1,1,-1]
 // Output: false
 
-console.log(canThreePartsEqualSum(arr1))
-console.log(canThreePartsEqualSum(arr2))
-console.log(canThreePartsEqualSum(arr3))
+// console.log(canThreePartsEqualSum(arr1))
+// console.log(canThreePartsEqualSum(arr2))
+// console.log(canThreePartsEqualSum(arr3))
 console.log(canThreePartsEqualSum(arr4))
-console.log(canThreePartsEqualSum(arr5))
+// console.log(canThreePartsEqualSum(arr5))
 
